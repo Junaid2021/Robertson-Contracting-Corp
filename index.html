@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Robertson Contracting Corp provides professional excavating, general contracting, custom home design, renovations, kitchen and bathroom remodeling, deck building, and RB construction throughout Bedford Hills, Mt Kisco, Katonah, and nearby areas in New York.">
+    <meta name="keywords" content="Bathroom remodeling in Bedford Hills NY, Kitchen Remodeling services in Bedford Hills NY, deck builder in Bedford Hills NY, General contractor in Bedford Hills NY, Excavating services Bedford Hills, Site preparation NY, Foundation excavation">
+    <title>Robertson Contracting Corp | Professional Contracting Services in Bedford Hills, NY</title>
+    <style>
+        :root {
+            --primary: #1a3a6c;
+            --secondary: #e67e22;
+            --accent: #27ae60;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 2.2rem;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-links a:hover, 
+        .nav-links a.active {
+            color: var(--secondary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 58, 108, 0.85), rgba(230, 126, 34, 0.8)), url('https://images.unsplash.com/photo-1541888946425-d81bb74d66a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 70px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+        }
+        
+        .cta-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: var(--transition);
+            border: 2px solid var(--secondary);
+            cursor: pointer;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 5rem 10%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Trust Section */
+        .trust {
+            background-color: white;
+            text-align: center;
+        }
+        
+        .trust-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 2.5rem;
+        }
+        
+        .trust-item {
+            min-width: 200px;
+        }
+        
+        .trust-icon {
+            font-size: 3.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .trust-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .trust-text {
+            font-size: 1.15rem;
+            color: var(--gray);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            min-height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1565008994311-8f54c27b5278?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .service-icon {
+            height: 80px;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+        }
+        
+        .service-content {
+            padding: 1.8rem;
+        }
+        
+        .service-content h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 3rem;
+            position: relative;
+        }
+        
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background: var(--secondary);
+            z-index: 1;
+        }
+        
+        .process-step {
+            text-align: center;
+            width: 20%;
+            min-width: 200px;
+            position: relative;
+            z-index: 2;
+            margin-top: 30px;
+        }
+        
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 25px;
+            border: 5px solid white;
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+        
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Why Choose Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2.5rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .feature-icon {
+            font-size: 2.8rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Service Areas */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+        
+        .area-item {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .area-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .area-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2.5rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--light-gray);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            margin-top: 20px;
+            font-style: italic;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        .author-info h4 {
+            font-size: 1.3rem;
+            color: var(--primary);
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        .rating {
+            color: #f39c12;
+            margin-top: 5px;
+            font-size: 1.2rem;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 2.5rem auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: var(--light);
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background: #f1f8ff;
+        }
+        
+        .faq-question.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .faq-question.active .faq-icon::after {
+            content: "−";
+        }
+        
+        .faq-icon {
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: white;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .faq-icon::after {
+            content: "+";
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.show {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(26, 58, 108, 0.9), rgba(26, 58, 108, 0.95)), url('https://images.unsplash.com/photo-1565008994311-8f54c27b5278?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            padding: 6rem 10%;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 2.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            min-width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 1.05rem;
+            transition: var(--transition);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+        }
+        
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 10% 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-about p {
+            margin-top: 15px;
+            color: #adb5bd;
+            line-height: 1.7;
+        }
+        
+        .footer-links h3,
+        .footer-contact h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h3::after,
+        .footer-contact h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #adb5bd;
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero p {
+                font-size: 1.3rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                min-height: 350px;
+                width: 100%;
+            }
+            
+            .process-step {
+                width: 45%;
+                margin-bottom: 30px;
+            }
+            
+            .process-steps::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background: white;
+                width: 80%;
+                height: calc(100vh - 70px);
+                padding: 2rem;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 1.5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .cta-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            section {
+                padding: 4rem 5%;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .process-step {
+                width: 100%;
+            }
+            
+            .step-number {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding-top: 80px;
+                padding-bottom: 50px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .trust-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .trust-item {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <span class="logo-icon">🚜</span>
+                Robertson<span>Contracting Corp</span>
+            </a>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Professional Excavating & Contracting Services in Bedford Hills, NY</h1>
+            <p>Family-owned company with 28+ years of experience delivering quality craftsmanship for excavating, site preparation, home renovations, and construction projects throughout Westchester County.</p>
+            <div class="cta-container">
+                <a href="#contact" class="btn">Get Free Estimate</a>
+                <a href="#services" class="btn btn-outline">View Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust" id="trust">
+        <div class="section-title">
+            <h2>Trusted By Homeowners & Businesses</h2>
+            <p>Three generations of excellence serving the Bedford Hills community and surrounding areas</p>
+        </div>
+        <div class="trust-container">
+            <div class="trust-item">
+                <div class="trust-icon">🏆</div>
+                <span class="trust-number">28+</span>
+                <span class="trust-text">Years Experience</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">👨‍👩‍👧‍👦</div>
+                <span class="trust-number">3</span>
+                <span class="trust-text">Generations of Craftsmanship</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🏡</div>
+                <span class="trust-number">500+</span>
+                <span class="trust-text">Projects Completed</span>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">⭐</div>
+                <span class="trust-number">4.9/5</span>
+                <span class="trust-text">Customer Rating</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-title">
+            <h2>Our Story</h2>
+            <p>Family-owned and operated with a commitment to quality and customer satisfaction</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Three Generations of Excellence in Contracting</h3>
+                <p>Robertson Contracting Corp is a family-run contracting business with over 28 years of experience serving Bedford Hills, Mt Kisco, Katonah, and surrounding areas in New York. What started as a small excavation operation has grown into a full-service contracting company known for quality craftsmanship and personalized service.</p>
+                <p>Our mission is to provide efficient, reliable, and precise contracting services for projects of all sizes - from site preparation and excavating to complete home renovations and RB construction. We believe in building lasting relationships with our clients through transparent communication, attention to detail, and unwavering commitment to excellence.</p>
+                <p>When you choose Robertson Contracting Corp, you're not just hiring a contractor - you're partnering with a dedicated team that treats your project with the same care and attention we would give our own homes.</p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services" style="background-color: var(--light);">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Comprehensive excavating and contracting solutions for residential and commercial properties</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🚜</div>
+                <div class="service-content">
+                    <h3>Robertson Contracting Corp</h3>
+                    <p>Professional site preparation, foundation excavation, grading, and trenching services for new construction and renovations.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <div class="service-content">
+                    <h3>General Contracting</h3>
+                    <p>Full project management from concept to completion, ensuring seamless execution of your construction or renovation project.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✏️</div>
+                <div class="service-content">
+                    <h3>Custom Home Design</h3>
+                    <p>Collaborative design process to bring your dream home vision to life with functional and beautiful spaces.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🍳</div>
+                <div class="service-content">
+                    <h3>Kitchen Remodeling</h3>
+                    <p>Complete kitchen transformations with quality materials, smart layouts, and attention to every detail.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛁</div>
+                <div class="service-content">
+                    <h3>Bathroom Remodeling</h3>
+                    <p>Luxurious and functional bathroom renovations that enhance comfort, style, and property value.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏡</div>
+                <div class="service-content">
+                    <h3>RB Contracting Corp</h3>
+                    <p>Design and build accessory dwelling units that provide additional living space, rental income, or multi-generational housing solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="section-title">
+            <h2>Our Process</h2>
+            <p>Transparent, efficient workflow from initial consultation to project completion</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-title">Consultation</div>
+                <p>Free on-site assessment and detailed project discussion</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-title">Proposal</div>
+                <p>Clear estimate with timeline, scope, and transparent pricing</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-title">Planning</div>
+                <p>Permit acquisition, material selection, and detailed scheduling</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-title">Execution</div>
+                <p>Professional construction with daily oversight and communication</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <div class="step-title">Completion</div>
+                <p>Final walkthrough, cleanup, and satisfaction guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us" id="why-us" style="background-color: var(--light);">
+        <div class="section-title">
+            <h2>Why Choose Robertson Contracting Corp</h2>
+            <p>Experience the difference that sets us apart from other contractors</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">💯</div>
+                <h3 class="feature-title">Quality Craftsmanship</h3>
+                <p>We never cut corners. Every project receives meticulous attention to detail and is built to last using quality materials and proven techniques.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🤝</div>
+                <h3 class="feature-title">Personalized Service</h3>
+                <p>As a family-owned business, we treat every client like family. You'll work directly with our experienced team throughout your project.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">⏱️</div>
+                <h3 class="feature-title">On-Time Completion</h3>
+                <p>We respect your time and schedule. Our efficient project management ensures timely completion without compromising quality.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">💰</div>
+                <h3 class="feature-title">Fair Pricing</h3>
+                <p>No hidden fees or surprise costs. We provide transparent, competitive pricing with detailed estimates before work begins.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section class="service-areas" id="service-areas">
+        <div class="section-title">
+            <h2>Service Areas</h2>
+            <p>Proudly serving communities throughout Westchester County and surrounding areas</p>
+        </div>
+        <div class="areas-grid">
+            <div class="area-item">
+                <div class="area-icon">📍</div>
+                <h3>Bedford Hills</h3>
+            </div>
+            <div class="area-item">
+                <div class="area-icon">📍</div>
+                <h3>Mt Kisco</h3>
+            </div>
+            <div class="area-item">
+                <div class="area-icon">📍</div>
+                <h3>Katonah</h3>
+            </div>
+            <div class="area-item">
+                <div class="area-icon">📍</div>
+                <h3>Plainfield Ave</h3>
+            </div>
+            <div class="area-item">
+                <div class="area-icon">📍</div>
+                <h3>North Salem</h3>
+            </div>
+            <div class="area-item">
+                <div class="area-icon">📍</div>
+                <h3>South Salem</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials" style="background-color: var(--light);">
+        <div class="section-title">
+            <h2>Client Testimonials</h2>
+            <p>Hear what our satisfied customers have to say about their experience with us</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-content">
+                    "Robertson Contracting Corp transformed our backyard with a beautiful patio and retaining wall. Their team was professional, cleaned up thoroughly each day, and completed the project ahead of schedule. We've received so many compliments from neighbors!"
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Michael R.</h4>
+                        <p>Bedford Hills, NY</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-content">
+                    "We hired them for a complete kitchen remodel and were impressed with their attention to detail and craftsmanship. They handled all the permits and coordination with inspectors. The result exceeded our expectations, and they stayed within our budget."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Sarah L.</h4>
+                        <p>Mt Kisco, NY</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <div class="testimonial-content">
+                    "After getting quotes from several contractors, we choose Robertson Contracting Corp for our ADU project. Their transparent pricing and clear communication made the decision easy. The project was completed on time and the quality of work is outstanding. Highly recommend!"
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>David & Maria T.</h4>
+                        <p>Katonah, NY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Answers to common questions about our services and process</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are you licensed and insured?</span>
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, Robertson Contracting Corp is fully licensed, bonded, and insured for all excavating and contracting services in New York State. We can provide certificate of insurance upon request.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What areas do you serve?</span>
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>We primarily serve Bedford Hills, Mt Kisco, Katonah, North Salem, South Salem, and surrounding communities in Westchester County. We also take on select projects in neighboring counties.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How long does a typical project take?</span>
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Project timelines vary based on scope and complexity. Small excavating jobs may take a few days, while full home renovations can take several months. We provide a detailed timeline during our consultation and keep you informed of progress throughout the project.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you handle permits and inspections?</span>
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we handle all necessary permits, approvals, and coordinate with local building inspectors. We ensure all work complies with local building codes and regulations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Contact us today for a free consultation and detailed estimate. Let our experienced team bring your vision to life with quality craftsmanship and personalized service.</p>
+        <a href="#contact" class="btn">Schedule Your Free Consultation</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Reach out for a free estimate or to discuss your project needs</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>46 Plainfield Ave, Bedford Hills, NY 10507</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h3>Call Us</h3>
+                        <p>(914) 666-0152</p>
+                        <p>Mon-Fri: 7:00 AM - 6:00 PM</p>
+                        <p>Sat: 8:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h3>Email Us</h3>
+                        <p>info@robertsoncontractingcorp.com</p>
+                        <p>service@robertsoncontractingcorp.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Project Details" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <a href="#" class="footer-logo">
+                    <span class="logo-icon">🚜</span>
+                    Robertson <span>Contracting Corp</span>
+                </a>
+                <p>Family-owned excavating and contracting company serving Westchester County with 28+ years of experience delivering quality craftsmanship and personalized service for residential and commercial projects.</p>
+                <div class="social-links">
+                    <a href="https://robertsoncontracting.com/" target="_blank" aria-label="Website">🌐</a>
+                    <a href="https://g.page/r/CQvHrXBxbstfEBM/review" target="_blank" aria-label="Google Reviews">⭐</a>
+                    <a href="https://www.pinterest.com/roberstoncrop/_profile/" target="_blank" aria-label="Pinterest">📌</a>
+                    <a href="https://www.provenexpert.com/robertson-contracting-corp/?mode=preview" target="_blank" aria-label="Proven Expert">🏆</a>
+                    <a href="https://www.brownbook.net/business/54702403/robertson-contracting-corp" target="_blank" aria-label="Brownbook">📖</a>
+                    <a href="https://www.callupcontact.com/b/businessprofile/Robertson_Contracting_Corp/9937279" target="_blank" aria-label="Call Up Contact">📱</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>46 Plainfield Ave</li>
+                    <li>Bedford Hills, NY 10507</li>
+                    <li>Phone: (914) 666-0152</li>
+                    <li>Email: info@robertsoncontractingcorp.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Robertson Contracting Corp. All Rights Reserved. | <a href="#" style="color: #adb5bd; text-decoration: underline;">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '☰';
+            });
+        });
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+                
+                // Close all other answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('show');
+                });
+                
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                });
+                
+                // Toggle current answer
+                if (!isActive) {
+                    answer.classList.add('show');
+                    question.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission handling
+        const contactForm = document.querySelector('.contact-form form');
+        if(contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will contact you shortly to discuss your project.');
+                contactForm.reset();
+            });
+        }
+        
+        // Sticky header effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+                header.style.background = 'rgba(255,255,255,0.98)';
+            } else {
+                header.style.boxShadow = 'var(--shadow)';
+                header.style.background = 'white';
+            }
+        });
+    </script>
+</body>
+</html>
